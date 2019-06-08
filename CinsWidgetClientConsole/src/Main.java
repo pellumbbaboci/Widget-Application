@@ -10,7 +10,7 @@ public class Main {
 
         try{
             //Initialize socket
-            Socket socket = new Socket(InetAddress.getByName("localhost"), 5000);
+            Socket socket = new Socket(InetAddress.getByName("10.103.163.4"), 5000);
             byte[] contents = new byte[10000];
             String fileFolder = System.getProperty("user.dir")+ "\\src\\downloads\\";
 
@@ -35,11 +35,11 @@ public class Main {
             String[] fileNameList = fileNamesConcat.split(",");
 
 
-            outputStream.writeUTF("download,"+ fileNameList[1]);
+            outputStream.writeUTF("download,"+ fileNameList[0]);
             outputStream.flush();
             System.out.println("download request sent");
 
-            FileOutputStream fos = new FileOutputStream(fileFolder+fileNameList[1]);
+            FileOutputStream fos = new FileOutputStream(fileFolder+fileNameList[0]);
             BufferedOutputStream bos = new BufferedOutputStream(fos);
 
             //No of bytes read in one read() call
