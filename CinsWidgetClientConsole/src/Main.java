@@ -10,9 +10,9 @@ public class Main {
 
         try{
             //Initialize socket
-            Socket socket = new Socket(InetAddress.getByName("10.103.163.4"), 5000);
+            Socket socket = new Socket(InetAddress.getByName("localhost"), 5000);
             byte[] contents = new byte[10000];
-            String fileFolder = System.getProperty("user.dir")+ "\\src\\downloads\\";
+            String fileFolder = System.getProperty("user.dir")+ "\\src\\";
 
             //Initialize the FileOutputStream to the output file's full path.
 

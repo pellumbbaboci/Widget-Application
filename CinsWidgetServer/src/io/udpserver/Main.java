@@ -5,6 +5,8 @@ import io.udpserver.currency.CurrencyScanThread;
 import io.udpserver.currency.CurrencyService;
 import io.udpserver.news.NewsScanThread;
 import io.udpserver.news.NewsService;
+import io.udpserver.weather.WeatherScanThread;
+import io.udpserver.weather.WeatherService;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -32,10 +34,16 @@ public class Main {
         NewsScanThread newsScanThread = new NewsScanThread();
         NewsService newsService = new NewsService(newsScanThread);
 
+        WeatherScanThread weatherScanThread = new WeatherScanThread();
+        WeatherService weatherService = new WeatherService(weatherScanThread);
+
+
         Thread threadCurrencyScan = new Thread(currencyScanThread);
         threadCurrencyScan.start();
         Thread threadNewsScan = new Thread(newsScanThread);
         threadNewsScan.start();
+        Thread threadWeatherScan = new Thread(weatherScanThread);
+        threadWeatherScan.start();
 
 
         while (true) {
@@ -67,6 +75,17 @@ public class Main {
                 }
                 System.out.println("sent");
             }else if(received.equalsIgnoreCase("weather")){
+                buffer = new byte[1024 * 64 ];
+                String sendDataString = weatherService.getWeatherString();
+                byte[] b = sendDataString.getBytes(Charset.forName("UTF-8"));
+                packet = new DatagramPacket(b, b.length, address, port);
+                try {
+                    socket.send(packet);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    break;
+                }
+
 
             }else if(received.equalsIgnoreCase("news")){
                 buffer = new byte[1024 * 64];

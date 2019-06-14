@@ -44,7 +44,7 @@ public class CurrencyScanThread implements Runnable {
 
     private void getCurrency(){
         try {
-            String response = getUrl(url);
+            String response = httpRequest(url);
             //System.out.println(response);
             Document doc = convertStringToXMLDocument(response);
             //System.out.println(doc.getElementsByTagName("Isim").item(1).getNodeValue());
@@ -78,7 +78,7 @@ public class CurrencyScanThread implements Runnable {
         System.out.println(euroS);
     }
 
-    private String getUrl(String url) throws IOException {
+    private String httpRequest(String url) throws IOException {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(url)

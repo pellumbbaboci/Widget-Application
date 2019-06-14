@@ -42,9 +42,9 @@ public class NewsScanThread implements Runnable {
         }
     }
 
-    public void getNews(){
+    private void getNews(){
         try {
-            String response = getUrl(url);
+            String response = httpRequest(url);
             //System.out.println(response);
             Document doc = convertStringToXMLDocument(response);
             //System.out.println(doc.getElementsByTagName("Isim").item(1).getNodeValue());
@@ -93,7 +93,7 @@ public class NewsScanThread implements Runnable {
 
     }
 
-    private String getUrl(String url) throws IOException {
+    private String httpRequest(String url) throws IOException {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(url)
