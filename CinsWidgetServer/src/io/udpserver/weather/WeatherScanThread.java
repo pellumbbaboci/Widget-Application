@@ -1,18 +1,14 @@
 package io.udpserver.weather;
 
-import com.google.gson.JsonArray;
+
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-
-
-
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class WeatherScanThread implements Runnable {
 
