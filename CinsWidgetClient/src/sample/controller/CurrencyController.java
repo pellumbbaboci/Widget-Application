@@ -1,17 +1,12 @@
 package sample.controller;
 
-import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import sample.service.CurrencyService;
-import sample.socket.EchoClient;
+import sample.socket.SocketClient;
 
-import java.awt.event.ActionEvent;
 import java.math.BigDecimal;
 import java.net.SocketException;
 import java.net.URL;
@@ -59,8 +54,8 @@ public class CurrencyController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
-            EchoClient echoClient = new EchoClient();
-            CurrencyService currencyService = new CurrencyService(echoClient);
+            SocketClient socketClient = new SocketClient();
+            CurrencyService currencyService = new CurrencyService(socketClient);
             Map<String, String> currencyMap = currencyService.getCurrency();
 
             usdInput.setOnKeyReleased(event -> {

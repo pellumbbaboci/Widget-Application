@@ -9,6 +9,6 @@ public class WeatherService {
     }
 
     public String getWeatherString(){
-        return this.weatherScanThread.demo;
+        return this.weatherScanThread.getValue() + "," + this.weatherScanThread.getCode();
     }
 }

@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import sample.Main;
 
 import java.io.IOException;
 import java.net.URL;
@@ -58,6 +59,9 @@ public class MenuController implements Initializable {
             stage.setResizable(false);
             stage.setTitle(stageLocation);
             stage.setScene(scene);
+            stage.setOnCloseRequest(closeEvent -> {
+                Main.primaryStage.show();
+            });
             stage.show();
 
             final Node source = (Node) event.getSource();

@@ -20,7 +20,7 @@
                         <Image url="@../pic/currency_usd.png" />
                      </image>
                      <VBox.margin>
-                        <Insets />
+                        <Insets left="5.0" />
                      </VBox.margin>
                   </ImageView>
                </children></VBox>
@@ -35,7 +35,7 @@
             <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                <children>
                   <JFXTextField fx:id="usdInput" />
-                  <Text fx:id="usdValueConvert" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="usdValueConvert" strokeType="OUTSIDE" strokeWidth="0.0" />
                </children></VBox>
          </children>
       </HBox>
@@ -43,10 +43,13 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="150.0">
+                  <ImageView fitHeight="145.0" fitWidth="145.0">
                      <image>
                         <Image url="@../pic/currency_euro.png" />
                      </image>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
                   </ImageView>
                </children></VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
@@ -60,7 +63,7 @@
             <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                <children>
                   <JFXTextField fx:id="euroInput" />
-                  <Text fx:id="euroValueConvert" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="euroValueConvert" strokeType="OUTSIDE" strokeWidth="0.0" />
                </children></VBox>
          </children>
       </HBox>
@@ -68,9 +71,9 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="150.0">
+                  <ImageView fitHeight="160.0" fitWidth="160.0">
                      <image>
-                        <Image url="@../pic/currency_tlira.png" />
+                        <Image url="@../pic/currency_tlira3.png" />
                      </image>
                   </ImageView>
                </children></VBox>
@@ -85,7 +88,7 @@
             <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                <children>
                   <JFXTextField fx:id="tlInput" />
-                  <Text fx:id="tlValueConvert" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="tlValueConvert" strokeType="OUTSIDE" strokeWidth="0.0" />
                </children></VBox>
          </children>
       </HBox>

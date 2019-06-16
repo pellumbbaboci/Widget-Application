@@ -12,7 +12,8 @@ import java.io.IOException;
 
 public class WeatherScanThread implements Runnable {
 
-    public String demo = null;
+    private String value = null;
+    private String code = null;
 
     private String url = null;
 
@@ -46,15 +47,10 @@ public class WeatherScanThread implements Runnable {
             JsonElement jelement = new JsonParser().parse(response2);
             JsonObject jobject = jelement.getAsJsonObject();
             jobject = jobject.getAsJsonObject();
-            String temperature = jobject.get("sicaklik").getAsString();
-
-
-            System.out.println(temperature);
-            System.out.println(temperature);
-            System.out.println(temperature);
-            System.out.println(temperature);
-
-            demo = temperature;
+            value = jobject.get("sicaklik").getAsString();
+            code = jobject.get("hadiseKodu").getAsString();
+            System.out.println(value);
+            System.out.println(code);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -74,4 +70,27 @@ public class WeatherScanThread implements Runnable {
         }
     }
 
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 }

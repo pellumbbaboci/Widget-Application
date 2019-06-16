@@ -1,12 +1,22 @@
 package sample.controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXListView;
+import com.jfoenix.controls.JFXPopup;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import sample.Main;
 
 import java.awt.*;
@@ -29,6 +39,12 @@ public class FileTransferController implements Initializable {
 
     @FXML
     private ProgressBar progressBar;
+
+    @FXML
+    private VBox mainBox;
+
+    @FXML
+    private StackPane stackPane;
 
 
 
@@ -134,6 +150,18 @@ public class FileTransferController implements Initializable {
             bos.flush();
             bos.close();
             fos.close();
+
+            final Stage dialog = new Stage();
+            dialog.setResizable(false);
+            dialog.initModality(Modality.APPLICATION_MODAL);
+            VBox dialogVbox = new VBox(20);
+            dialogVbox.setPadding(new Insets(10));
+            Text text = new Text("Download completed.");
+            text.setFont(new Font("cambria",18));
+            dialogVbox.getChildren().add(text);
+            Scene dialogScene = new Scene(dialogVbox, 200, 100);
+            dialog.setScene(dialogScene);
+            dialog.show();
 
 
         } catch (IOException e) {

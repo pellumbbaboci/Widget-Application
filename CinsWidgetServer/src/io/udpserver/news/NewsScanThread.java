@@ -19,14 +19,16 @@ import java.util.List;
 public class NewsScanThread implements Runnable {
 
     private List<String> cachedNewsList;
-    private String marker;
+    private String outerMarker;
+    private String innerMarker;
     String url = null;
 
     public NewsScanThread(){
         this.cachedNewsList = new ArrayList<>();
         //request only 5 news so the network bandwidth is not wasted.
         this.url = "https://www.trthaber.com/xml_mobile.php?tur=xml_genel&adet=5";
-        this.marker = "*#*";
+        this.outerMarker = "outerMarker";
+        this.innerMarker = "innerMarker";
         this.getNews();
     }
 
@@ -74,12 +76,12 @@ public class NewsScanThread implements Runnable {
                 String date = element.select("haber_tarihi").text();
                 System.out.println(date);
 
-                this.cachedNewsList.add("header:" + header +
-                        this.marker + "img:"+ img +
-                        this.marker + "link:"+ link +
-                        this.marker + "body:" + body +
-                        this.marker + "date:"+ date +
-                        this.marker);
+                this.cachedNewsList.add(header +
+                        this.innerMarker + img +
+                        this.innerMarker + link +
+                        this.innerMarker + body +
+                        this.innerMarker + date +
+                        this.outerMarker);
 
 
                 i++;
