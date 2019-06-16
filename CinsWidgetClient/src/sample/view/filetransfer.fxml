@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.FileTransferController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <JFXListView fx:id="jfxListView" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox prefHeight="18.0" prefWidth="800.0">
+         <children>
+            <ProgressBar fx:id="progressBar" prefHeight="18.0" prefWidth="802.0" progress="0.0" HBox.hgrow="NEVER" />
+         </children></HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="downloadButton" onMouseClicked="#handleDownloadClick" prefHeight="105.0" prefWidth="406.0" ripplerFill="#0083ff" text="DOWNLOAD" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <Shadow />
+                     </effect>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.3476190476190476">
+                           <stops>
+                              <Stop color="#0026ff" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="openButton" onMouseClicked="#handleOpenClick" prefHeight="110.0" prefWidth="400.0" text="OPEN">
+                     <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <Shadow />
+                     </effect>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.44285714285714284">
+                           <stops>
+                              <Stop color="#005eff" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </JFXButton>
+               </children></VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

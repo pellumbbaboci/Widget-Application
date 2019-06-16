@@ -28,7 +28,7 @@ public class ServerThread implements Runnable {
     @Override
     public void run() {
         System.out.println("Thread started.");
-        while(true){
+
             try {
                 System.out.println("flag");
                 String input = dataInputStream.readUTF();
@@ -46,6 +46,8 @@ public class ServerThread implements Runnable {
                     dataOutputStream.writeUTF(sendFileListString);
                     dataOutputStream.flush();
 
+                    socket.close();
+
 //                    if(FileScanThread.folderList.contains(input)){
 //
 //                    }else{
@@ -59,9 +61,8 @@ public class ServerThread implements Runnable {
                 }
             } catch (IOException e) {
                 e.printStackTrace();
-                break;
             }
-        }
+
 
     }
 
@@ -80,9 +81,12 @@ public class ServerThread implements Runnable {
             //Read File Contents into contents array
             byte[] contents;
             long fileLength = file.length();
+            dataOutputStream.writeLong(fileLength);
+            dataOutputStream.flush();
+            dataInputStream.readUTF();
+
             long current = 0;
 
-            long start = System.nanoTime();
             while(current!=fileLength){
                 int size = 10000;
                 if(fileLength - current >= size)
@@ -96,8 +100,10 @@ public class ServerThread implements Runnable {
                 dataOutputStream.write(contents);
                 System.out.print("Sending file ... "+(current*100)/fileLength+"% complete! \n");
             }
-            dataOutputStream.writeByte(-1);
+
+
             dataOutputStream.flush();
+
 
             socket.close();
         } catch (IOException e) {
