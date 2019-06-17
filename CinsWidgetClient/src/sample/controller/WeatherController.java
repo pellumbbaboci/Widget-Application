@@ -31,27 +31,27 @@ public class WeatherController implements Initializable {
         }
         WeatherService weatherService = new WeatherService(socketClient);
 
-        String[] values =  weatherService.getWeather().split(",");
-        value.setText(values[0]+ " °C");
+        String[] values = weatherService.getWeather().split(",");
+        value.setText(values[0] + " °C");
         imageView.setPreserveRatio(false);
         imageView.setFitHeight(360);
         imageView.setFitWidth(800);
 
-        if(values[1].equalsIgnoreCase("CB") ||
-        values[1].equalsIgnoreCase("AB") ||
-        values[1].equalsIgnoreCase("PB")){
-            String url = System.getProperty("user.dir")+ "\\src\\sample\\pic\\cloudy.png";
-            Image image = new Image("file:\\"+url);
+        if (values[1].equalsIgnoreCase("CB") ||
+                values[1].equalsIgnoreCase("AB") ||
+                values[1].equalsIgnoreCase("PB")) {
+            String url = System.getProperty("user.dir") + "\\src\\sample\\pic\\cloudy.png";
+            Image image = new Image("file:\\" + url);
             imageView.setImage(image);
-        } else if(values[1].equalsIgnoreCase("GSY") ||
-        values[1].equalsIgnoreCase("SY") ||
-        values[1].equalsIgnoreCase("Y")) {
-            String url3 = System.getProperty("user.dir")+ "\\src\\sample\\pic\\rainy.png";
-            Image image3 = new Image("file:\\"+url3);
+        } else if (values[1].equalsIgnoreCase("GSY") ||
+                values[1].equalsIgnoreCase("SY") ||
+                values[1].equalsIgnoreCase("Y")) {
+            String url3 = System.getProperty("user.dir") + "\\src\\sample\\pic\\rainy.png";
+            Image image3 = new Image("file:\\" + url3);
             imageView.setImage(image3);
-        }else{
-            String url2 = System.getProperty("user.dir")+ "\\src\\sample\\pic\\sunny.png";
-            Image image2 = new Image("file:\\"+url2);
+        } else {
+            String url2 = System.getProperty("user.dir") + "\\src\\sample\\pic\\sunny.png";
+            Image image2 = new Image("file:\\" + url2);
             imageView.setImage(image2);
         }
 

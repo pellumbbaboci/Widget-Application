@@ -6,13 +6,7 @@ import okhttp3.Response;
 import org.jsoup.Jsoup;
 import org.jsoup.parser.Parser;
 import org.jsoup.select.Elements;
-import org.w3c.dom.Document;
-import org.xml.sax.InputSource;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.IOException;
-import java.io.StringReader;
 
 
 public class CurrencyScanThread implements Runnable {
@@ -32,27 +26,23 @@ public class CurrencyScanThread implements Runnable {
 
     @Override
     public void run() {
-        while(true){
+        while (true) {
             try {
                 Thread.sleep(300000);
                 getCurrency();
             } catch (InterruptedException e) {
                 e.printStackTrace();
+                break;
             }
         }
     }
 
-    private void getCurrency(){
+    private void getCurrency() {
         try {
             String response = httpRequest(url);
-            //System.out.println(response);
-            Document doc = convertStringToXMLDocument(response);
-            //System.out.println(doc.getElementsByTagName("Isim").item(1).getNodeValue());
-            //System.out.println(doc.getElementsByTagName("CurrencyName").item(5));
-
             org.jsoup.nodes.Document doc2 = Jsoup.parse(response, "", Parser.xmlParser());
             Elements elements = doc2.select("Currency");
-            for (org.jsoup.nodes.Element element : elements) // iterate over each elements you've selected
+            for (org.jsoup.nodes.Element element : elements)
             {
                 if (element.select("Isim").text().equalsIgnoreCase("ABD DOLARI")) {
 
@@ -89,23 +79,6 @@ public class CurrencyScanThread implements Runnable {
         }
     }
 
-    private Document convertStringToXMLDocument(String xmlString) {
-        //Parser that produces DOM object trees from XML content
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-
-        //API to obtain DOM Document instance
-        DocumentBuilder builder = null;
-        try {
-            //Create DocumentBuilder with default configuration
-            builder = factory.newDocumentBuilder();
-
-            //Parse the content to Document object
-            return builder.parse(new InputSource(new StringReader(xmlString)));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 
     String getUrl() {
         return url;

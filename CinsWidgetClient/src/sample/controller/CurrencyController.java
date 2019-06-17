@@ -49,8 +49,6 @@ public class CurrencyController implements Initializable {
     private Text tlValueConvert;
 
 
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -60,7 +58,7 @@ public class CurrencyController implements Initializable {
 
             usdInput.setOnKeyReleased(event -> {
 
-                if(usdInput.getText().isEmpty()){
+                if (usdInput.getText().isEmpty()) {
                     usdValueConvert.setText("");
                     return;
                 }
@@ -84,15 +82,15 @@ public class CurrencyController implements Initializable {
                         .setScale(4, BigDecimal.ROUND_HALF_UP).toString();
 
 
-                usdValueConvert.setText("Euro Buy : " + euroValueBuyString +" €\n"+
-                        "Euro Sell : "+ euroValueSellString+" €\n"+
-                        "Turkish Lira Buy : "+ tlValueBuyString + " ₺\n"+
-                        "Turkish Lira Sell : "+ tlValueSellString+ " ₺");
+                usdValueConvert.setText("Euro Buy : " + euroValueBuyString + " €\n" +
+                        "Euro Sell : " + euroValueSellString + " €\n" +
+                        "Turkish Lira Buy : " + tlValueBuyString + " ₺\n" +
+                        "Turkish Lira Sell : " + tlValueSellString + " ₺");
 
             });
 
             euroInput.setOnKeyReleased(event -> {
-                if(euroInput.getText().isEmpty()){
+                if (euroInput.getText().isEmpty()) {
                     euroValueConvert.setText("");
                     return;
                 }
@@ -115,19 +113,16 @@ public class CurrencyController implements Initializable {
                         .setScale(4, BigDecimal.ROUND_HALF_UP).toString();
 
 
-
-
-
-                euroValueConvert.setText("USD Buy : " + usdValueBuyString +" $\n"+
-                        "USD Sell : "+ usdValueSellString+" $\n"+
-                        "Turkish Lira Buy : "+ tlValueBuyString + " ₺\n"+
-                        "Turkish Lira Sell : "+ tlValueSellString+" ₺");
+                euroValueConvert.setText("USD Buy : " + usdValueBuyString + " $\n" +
+                        "USD Sell : " + usdValueSellString + " $\n" +
+                        "Turkish Lira Buy : " + tlValueBuyString + " ₺\n" +
+                        "Turkish Lira Sell : " + tlValueSellString + " ₺");
 
             });
 
             tlInput.setOnKeyReleased(event -> {
 
-                if(tlInput.getText().isEmpty()){
+                if (tlInput.getText().isEmpty()) {
                     tlValueConvert.setText("");
                     return;
                 }
@@ -151,10 +146,10 @@ public class CurrencyController implements Initializable {
                         .setScale(4, BigDecimal.ROUND_HALF_UP).toString();
 
 
-                tlValueConvert.setText("USD Buy : " + usdValueBuyString +" $\n"+
-                        "USD Sell : "+ usdValueSellString+" $\n"+
-                        "Euro Buy : "+ euroValueBuyString + " €\n"+
-                        "Euro Sell : "+ euroValueSellString+ " €");
+                tlValueConvert.setText("USD Buy : " + usdValueBuyString + " $\n" +
+                        "USD Sell : " + usdValueSellString + " $\n" +
+                        "Euro Buy : " + euroValueBuyString + " €\n" +
+                        "Euro Sell : " + euroValueSellString + " €");
             });
 
 
@@ -170,7 +165,6 @@ public class CurrencyController implements Initializable {
             exchange();
 
 
-
         } catch (SocketException | UnknownHostException e) {
             e.printStackTrace();
         }
@@ -178,9 +172,9 @@ public class CurrencyController implements Initializable {
     }
 
 
-    private void exchange(){
+    private void exchange() {
 
-        double usdBuy  = usdB / euroB;
+        double usdBuy = usdB / euroB;
         String usdBuyString = new BigDecimal(String.valueOf(usdBuy))
                 .setScale(4, BigDecimal.ROUND_HALF_UP).toString();
 
@@ -189,96 +183,97 @@ public class CurrencyController implements Initializable {
         String usdSellString = new BigDecimal(String.valueOf(usdSell))
                 .setScale(4, BigDecimal.ROUND_HALF_UP).toString();
 
-        usdValue.setText("Buy : "+ usdB + " ₺\n" +
-                "Sell : "+ usdS + " ₺\n"+
-                "Buy : "+ usdBuyString + " €\n"+
-                "Sell : "+ usdSellString + " €");
+        usdValue.setText("Buy : " + usdB + " ₺\n" +
+                "Sell : " + usdS + " ₺\n" +
+                "Buy : " + usdBuyString + " €\n" +
+                "Sell : " + usdSellString + " €");
 
         double euroBuy = euroB / usdB;
-        String euroBuyString =  new BigDecimal(String.valueOf(euroBuy))
+        String euroBuyString = new BigDecimal(String.valueOf(euroBuy))
                 .setScale(4, BigDecimal.ROUND_HALF_UP).toString();
 
         double euroSell = euroS / usdS;
         String euroSellString = new BigDecimal(String.valueOf(euroSell))
                 .setScale(4, BigDecimal.ROUND_HALF_UP).toString();
 
-        euroValue.setText("Buy : "+ euroB + " ₺\n" +
-                "Sell : "+ euroS + " ₺\n"+
-                "Buy : "+ euroBuyString + " $\n"+
-                "Sell : "+ euroSellString + " $");
+        euroValue.setText("Buy : " + euroB + " ₺\n" +
+                "Sell : " + euroS + " ₺\n" +
+                "Buy : " + euroBuyString + " $\n" +
+                "Sell : " + euroSellString + " $");
 
 
-        double tlUsdBuy  = 1 / usdB;
+        double tlUsdBuy = 1 / usdB;
         String tlUsdBuyString = new BigDecimal(String.valueOf(tlUsdBuy))
                 .setScale(4, BigDecimal.ROUND_HALF_UP).toString();
         double tlUsdSell = 1 / usdS;
         String tlUsdSellString = new BigDecimal(String.valueOf(tlUsdSell))
                 .setScale(4, BigDecimal.ROUND_HALF_UP).toString();
 
-        double tlEuroBuy  = 1 / euroB;
+        double tlEuroBuy = 1 / euroB;
         String tlEuroBuyString = new BigDecimal(String.valueOf(tlEuroBuy))
                 .setScale(4, BigDecimal.ROUND_HALF_UP).toString();
         double tlEuroSell = 1 / euroS;
         String tlEuroSellString = new BigDecimal(String.valueOf(tlEuroSell))
                 .setScale(4, BigDecimal.ROUND_HALF_UP).toString();
 
-        tlValue.setText("Buy : "+ tlUsdBuyString + " $\n" +
-                "Sell : "+ tlUsdSellString + " $\n"+
-                "Buy : "+ tlEuroBuyString + " €\n"+
-                "Sell : "+ tlEuroSellString + " €");
+        tlValue.setText("Buy : " + tlUsdBuyString + " $\n" +
+                "Sell : " + tlUsdSellString + " $\n" +
+                "Buy : " + tlEuroBuyString + " €\n" +
+                "Sell : " + tlEuroSellString + " €");
 
 
     }
 
-    private double usdToEuro(double usd, String type){
+    private double usdToEuro(double usd, String type) {
 
-        if(type.equalsIgnoreCase("buy")){
+        if (type.equalsIgnoreCase("buy")) {
             double buyRatio = usdB / euroB;
             return usd * buyRatio;
-        }else{
+        } else {
             double sellRatio = usdS / euroS;
             return usd * sellRatio;
         }
 
     }
 
-    private double usdToTl(double usd, String type){
-        if(type.equalsIgnoreCase("buy")){
+    private double usdToTl(double usd, String type) {
+        if (type.equalsIgnoreCase("buy")) {
             return usd * usdB;
-        }else{
+        } else {
             return usd * usdS;
         }
     }
 
-    private double tlToEuro(double tl, String type){
-        if(type.equalsIgnoreCase("buy")){
+    private double tlToEuro(double tl, String type) {
+        if (type.equalsIgnoreCase("buy")) {
             return tl / euroB;
-        }else{
+        } else {
             return tl / euroS;
         }
     }
 
-    private double tlToUsd(double tl, String type){
-        if(type.equalsIgnoreCase("buy")){
+    private double tlToUsd(double tl, String type) {
+        if (type.equalsIgnoreCase("buy")) {
             return tl / usdB;
-        }else{
+        } else {
             return tl / usdS;
         }
     }
 
-    private double euroToUsd(double euro, String type){
-        if(type.equalsIgnoreCase("buy")){
+    private double euroToUsd(double euro, String type) {
+        if (type.equalsIgnoreCase("buy")) {
             double buyRatio = euroB / usdB;
             return euro * buyRatio;
-        }else{
+        } else {
             double sellRatio = euroS / usdS;
             return euro * sellRatio;
         }
     }
-    private double euroToTl(double euro, String type){
-        if(type.equalsIgnoreCase("buy")){
+
+    private double euroToTl(double euro, String type) {
+        if (type.equalsIgnoreCase("buy")) {
             return euro * euroB;
-        }else{
+        } else {
             return euro * euroS;
         }
     }

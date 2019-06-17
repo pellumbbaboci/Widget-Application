@@ -18,12 +18,12 @@ import java.util.List;
 
 public class NewsScanThread implements Runnable {
 
+    String url = null;
     private List<String> cachedNewsList;
     private String outerMarker;
     private String innerMarker;
-    String url = null;
 
-    public NewsScanThread(){
+    public NewsScanThread() {
         this.cachedNewsList = new ArrayList<>();
         //request only 5 news so the network bandwidth is not wasted.
         this.url = "https://www.trthaber.com/xml_mobile.php?tur=xml_genel&adet=5";
@@ -34,23 +34,20 @@ public class NewsScanThread implements Runnable {
 
     @Override
     public void run() {
-        while(true){
+        while (true) {
             try {
                 Thread.sleep(300000);
                 getNews();
             } catch (InterruptedException e) {
                 e.printStackTrace();
+                break;
             }
         }
     }
 
-    private void getNews(){
+    private void getNews() {
         try {
             String response = httpRequest(url);
-            //System.out.println(response);
-            Document doc = convertStringToXMLDocument(response);
-            //System.out.println(doc.getElementsByTagName("Isim").item(1).getNodeValue());
-            //System.out.println(doc.getElementsByTagName("CurrencyName").item(5));
 
             this.cachedNewsList = new ArrayList<>();
 
@@ -106,24 +103,6 @@ public class NewsScanThread implements Runnable {
         }
     }
 
-    private Document convertStringToXMLDocument(String xmlString) {
-        //Parser that produces DOM object trees from XML content
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-
-        //API to obtain DOM Document instance
-        DocumentBuilder builder = null;
-        try {
-            //Create DocumentBuilder with default configuration
-            builder = factory.newDocumentBuilder();
-
-            //Parse the content to Document object
-            return builder.parse(new InputSource(new StringReader(xmlString)));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
 
     String getUrl() {
         return url;
@@ -133,11 +112,8 @@ public class NewsScanThread implements Runnable {
         this.url = url;
     }
 
-    public List<String> getCachedNewsList() {
+    List<String> getCachedNewsList() {
         return cachedNewsList;
     }
 
-    public void setCachedNewsList(List<String> cachedNewsList) {
-        this.cachedNewsList = cachedNewsList;
-    }
 }

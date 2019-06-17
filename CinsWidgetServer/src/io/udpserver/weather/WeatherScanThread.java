@@ -7,6 +7,7 @@ import com.google.gson.JsonParser;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+
 import java.io.IOException;
 
 
@@ -25,26 +26,26 @@ public class WeatherScanThread implements Runnable {
 
     @Override
     public void run() {
-        while(true){
+        while (true) {
             try {
                 Thread.sleep(300000);
                 getWeather();
             } catch (InterruptedException e) {
                 e.printStackTrace();
+                break;
             }
         }
     }
 
 
-    public void getWeather(){
+    private void getWeather() {
         try {
             String response = httpRequest(url);
-            System.out.println(response);
-            String response2 = response.substring(1,response.length() -1);
-            System.out.println(response2);
+            //format response to remove brackets []
+            String responseFormatted = response.substring(1, response.length() - 1);
 
 
-            JsonElement jelement = new JsonParser().parse(response2);
+            JsonElement jelement = new JsonParser().parse(responseFormatted);
             JsonObject jobject = jelement.getAsJsonObject();
             jobject = jobject.getAsJsonObject();
             value = jobject.get("sicaklik").getAsString();

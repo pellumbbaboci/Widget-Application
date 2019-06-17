@@ -1,9 +1,7 @@
 package sample.controller;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXListView;
-import com.jfoenix.controls.JFXPopup;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
@@ -17,13 +15,12 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import sample.Main;
 
 import java.awt.*;
 import java.io.*;
-import java.net.*;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.net.URL;
 import java.util.ResourceBundle;
 
 public class FileTransferController implements Initializable {
@@ -47,19 +44,17 @@ public class FileTransferController implements Initializable {
     private StackPane stackPane;
 
 
-
-
     private String fileFolder;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        fileFolder = System.getProperty("user.dir")+ "\\src\\sample\\download\\";
+        fileFolder = System.getProperty("user.dir") + "\\src\\sample\\download\\";
         String[] fileNameList = getFileNames();
-        if(fileNameList.length == 0){
+        if (fileNameList.length == 0) {
             System.out.println("error");
             return;
         }
-        for(String i : fileNameList){
+        for (String i : fileNameList) {
             jfxListView.getItems().add(new Label(i));
         }
     }
@@ -69,7 +64,7 @@ public class FileTransferController implements Initializable {
         progressBar.setProgress(0);
         progressBar.setVisible(false);
         Label label = jfxListView.getSelectionModel().getSelectedItem();
-        if(label == null){
+        if (label == null) {
             return;
         }
         downloadFile(label.getText());
@@ -79,7 +74,7 @@ public class FileTransferController implements Initializable {
     private void handleOpenClick(MouseEvent event) {
         try {
 
-            File file = new File (System.getProperty("user.dir")+ "\\src\\sample\\download\\");
+            File file = new File(System.getProperty("user.dir") + "\\src\\sample\\download\\");
             Desktop desktop = Desktop.getDesktop();
             desktop.open(file);
 
@@ -88,13 +83,11 @@ public class FileTransferController implements Initializable {
         }
     }
 
-    public String[] getFileNames(){
+    private String[] getFileNames() {
         try {
 
             Socket socket = new Socket(InetAddress.getByName("localhost"), 5000);
-            byte[] contents = new byte[10000];
 
-            InputStream is = socket.getInputStream();
             DataOutputStream dataOutputStream = new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
             DataInputStream dataInputStream = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
 
@@ -113,20 +106,19 @@ public class FileTransferController implements Initializable {
         return new String[0];
     }
 
-    public void downloadFile(String fileName){
+    private void downloadFile(String fileName) {
 
         progressBar.setVisible(true);
 
         try {
             Socket socket = new Socket(InetAddress.getByName("localhost"), 5000);
-            InputStream is = socket.getInputStream();
             DataOutputStream dataOutputStream = new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
             DataInputStream dataInputStream = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
 
-            dataOutputStream.writeUTF("download,"+ fileName);
+            dataOutputStream.writeUTF("download," + fileName);
             dataOutputStream.flush();
 
-            FileOutputStream fos = new FileOutputStream(fileFolder+fileName);
+            FileOutputStream fos = new FileOutputStream(fileFolder + fileName);
             BufferedOutputStream bos = new BufferedOutputStream(fos);
 
             long fileSize = dataInputStream.readLong();
@@ -140,9 +132,9 @@ public class FileTransferController implements Initializable {
             int bytesRead = 0;
             int progressTurn = 0;
             byte[] contents = new byte[10000];
-            while((bytesRead=dataInputStream.read(contents))!=-1){
+            while ((bytesRead = dataInputStream.read(contents)) != -1) {
                 progressTurn++;
-                double progress = ( progressTurn / fileChunkRatio ) * 100;
+                double progress = (progressTurn / fileChunkRatio) * 100;
                 progressBar.setProgress(progress);
                 bos.write(contents, 0, bytesRead);
             }
@@ -157,7 +149,7 @@ public class FileTransferController implements Initializable {
             VBox dialogVbox = new VBox(20);
             dialogVbox.setPadding(new Insets(10));
             Text text = new Text("Download completed.");
-            text.setFont(new Font("cambria",18));
+            text.setFont(new Font("cambria", 18));
             dialogVbox.getChildren().add(text);
             Scene dialogScene = new Scene(dialogVbox, 200, 100);
             dialog.setScene(dialogScene);

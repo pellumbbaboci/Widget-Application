@@ -63,7 +63,7 @@ public class Main {
             int port = packet.getPort();
 
 
-            if(received.equalsIgnoreCase("currency")){
+            if (received.equalsIgnoreCase("currency")) {
                 String sendDataString = currencyService.getCurrencyString();
                 byte[] b = sendDataString.getBytes(Charset.forName("UTF-8"));
                 packet = new DatagramPacket(b, b.length, address, port);
@@ -74,8 +74,7 @@ public class Main {
                     break;
                 }
                 System.out.println("sent");
-            }else if(received.equalsIgnoreCase("weather")){
-                buffer = new byte[1024 * 64 ];
+            } else if (received.equalsIgnoreCase("weather")) {
                 String sendDataString = weatherService.getWeatherString();
                 byte[] b = sendDataString.getBytes(Charset.forName("UTF-8"));
                 packet = new DatagramPacket(b, b.length, address, port);
@@ -87,8 +86,7 @@ public class Main {
                 }
 
 
-            }else if(received.equalsIgnoreCase("news")){
-                buffer = new byte[1024 * 64];
+            } else if (received.equalsIgnoreCase("news")) {
                 String sendDataString = newsService.getNewsString();
                 byte[] b = sendDataString.getBytes(Charset.forName("UTF-8"));
                 packet = new DatagramPacket(b, b.length, address, port);
@@ -98,13 +96,8 @@ public class Main {
                     e.printStackTrace();
                     break;
                 }
-            }else{
-                continue;
-                //TODO ignore
-                //TODO ignore
-                //TODO ignore
-                //TODO ignore
-                //TODO ignore
+            } else {
+                System.out.println("Unknown message: "+ received);
             }
 
         }

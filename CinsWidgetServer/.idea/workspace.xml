@@ -3,24 +3,55 @@
   <component name="ChangeListManager">
     <list default="true" id="e971e250-347a-4dbd-933a-f38ce2b19ab0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/META-INF/CinsWidgetClient.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/controller/CurrencyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/controller/CurrencyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/service/CurrencyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/service/CurrencyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/socket/EchoClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/controller/FileTransferController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/controller/FileTransferController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/controller/NewsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/download/abba.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/download/ronaldo.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/service/NewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/service/NewsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/view/currency.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/view/currency.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/view/filetransfer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/view/filetransfer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/view/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/view/menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/view/news.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/view/news.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/view/weather.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/out/production/CinsWidgetClient/sample/view/weather.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/controller/CurrencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/controller/CurrencyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/controller/FileTransferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/controller/FileTransferController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/controller/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/controller/NewsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/controller/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/controller/WeatherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/download/abba.mp3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/service/CurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/service/CurrencyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/socket/EchoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/socket/SocketClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/service/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/service/NewsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/service/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/service/WeatherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/socket/SocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/socket/SocketClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/view/currency.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/view/currency.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/view/filetransfer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/view/filetransfer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/view/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/view/menu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/view/news.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/view/news.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/view/weather.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClient/src/sample/view/weather.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CinsWidgetClientConsole/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CinsWidgetClientConsole/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CinsWidgetServer/io/filetransfer/FileScanThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CinsWidgetServer/io/filetransfer/FileScanThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CinsWidgetServer/io/filetransfer/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CinsWidgetServer/io/filetransfer/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CinsWidgetServer/io/filetransfer/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CinsWidgetServer/io/filetransfer/ServerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CinsWidgetServer/io/filetransfer/resources/ronaldo.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CinsWidgetServer/io/udpserver/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CinsWidgetServer/io/udpserver/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CinsWidgetServer/io/udpserver/currency/CurrencyScanThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CinsWidgetServer/io/udpserver/currency/CurrencyScanThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CinsWidgetServer/io/udpserver/news/NewsScanThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CinsWidgetServer/io/udpserver/news/NewsScanThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CinsWidgetServer/io/udpserver/weather/WeatherScanThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CinsWidgetServer/io/udpserver/weather/WeatherScanThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/filetransfer/FileScanThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/filetransfer/FileScanThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/filetransfer/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/filetransfer/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/filetransfer/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/filetransfer/ServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/filetransfer/resources/ronaldo.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/udpserver/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/udpserver/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/udpserver/currency/CurrencyScanThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/udpserver/currency/CurrencyScanThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/udpserver/currency/CurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/udpserver/currency/CurrencyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/io/udpserver/news/NewsScanThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/udpserver/news/NewsScanThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/udpserver/news/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/udpserver/news/NewsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/io/udpserver/weather/WeatherScanThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/udpserver/weather/WeatherScanThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/io/udpserver/weather/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/udpserver/weather/WeatherService.java" afterDir="false" />
     </list>
@@ -34,37 +65,43 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1002740635">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="157" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="157" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="10" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/io/udpserver/weather/WeatherScanThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-400">
-              <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2080#2081#0" expanded="true" />
-                <element signature="e#2108#2109#0" expanded="true" />
-                <element signature="e#2150#2151#0" expanded="true" />
-                <element signature="e#2184#2185#0" expanded="true" />
-                <element signature="e#2215#2216#0" expanded="true" />
-                <element signature="e#2242#2243#0" expanded="true" />
-                <element signature="e#2282#2283#0" expanded="true" />
-                <element signature="e#2314#2315#0" expanded="true" />
-                <element signature="e#2344#2345#0" expanded="true" />
-                <element signature="e#2370#2371#0" expanded="true" />
-                <element signature="e#2408#2409#0" expanded="true" />
-                <element signature="e#2438#2439#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/io/filetransfer/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/io/udpserver/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="1914">
+              <caret line="99" column="64" selection-start-line="99" selection-start-column="64" selection-end-line="99" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -84,21 +121,28 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/io/filetransfer/FileScanThread.java" />
-        <option value="$PROJECT_DIR$/src/io/udpserver/currency/CurrencyScanThread.java" />
-        <option value="$PROJECT_DIR$/src/io/udpserver/Main.java" />
-        <option value="$PROJECT_DIR$/src/io/filetransfer/ServerThread.java" />
-        <option value="$PROJECT_DIR$/src/io/udpserver/news/NewsScanThread.java" />
         <option value="$PROJECT_DIR$/src/io/udpserver/weather/WeatherService.java" />
+        <option value="$PROJECT_DIR$/src/io/filetransfer/Main.java" />
+        <option value="$PROJECT_DIR$/src/io/filetransfer/FileScanThread.java" />
+        <option value="$PROJECT_DIR$/src/io/filetransfer/ServerThread.java" />
+        <option value="$PROJECT_DIR$/src/io/udpserver/Main.java" />
+        <option value="$PROJECT_DIR$/src/io/udpserver/currency/CurrencyScanThread.java" />
+        <option value="$PROJECT_DIR$/src/io/udpserver/news/NewsScanThread.java" />
         <option value="$PROJECT_DIR$/src/io/udpserver/weather/WeatherScanThread.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1612" />
-    <option name="height" value="876" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1613" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -106,6 +150,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -136,8 +182,7 @@
               <item name="CinsWidgetServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="io" type="462c0819:PsiDirectoryNode" />
-              <item name="filetransfer" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="udpserver" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CinsWidgetServer" type="b2602c69:ProjectViewProjectNode" />
@@ -145,6 +190,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="io" type="462c0819:PsiDirectoryNode" />
               <item name="udpserver" type="462c0819:PsiDirectoryNode" />
+              <item name="currency" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CinsWidgetServer" type="b2602c69:ProjectViewProjectNode" />
@@ -166,8 +212,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -181,7 +225,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -222,6 +266,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -243,11 +291,12 @@
       <workItem from="1560597797547" duration="3844000" />
       <workItem from="1560615801875" duration="1753000" />
       <workItem from="1560674592942" duration="11932000" />
+      <workItem from="1560805167118" duration="1487000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21274000" />
+    <option name="totallyTimeSpent" value="22761000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -259,27 +308,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.15085287" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.1673177" />
       <window_info id="Structure" order="1" sideWeight="0.50080776" side_tool="true" weight="0.14605543" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="1" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Messages" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.4539545" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.4532967" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32936078" />
+      <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -292,89 +342,80 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/io/udpserver/currency/CurrencyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="20" column="73" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/udpserver/currency/CurrencyScanThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1250">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/io/filetransfer/FileScanThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        <state relative-caret-position="763">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/io/filetransfer/ServerThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/udpserver/news/NewsScanThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="62" column="50" lean-forward="true" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/udpserver/news/NewsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/udpserver/weather/WeatherService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/udpserver/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="68" column="62" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/udpserver/weather/WeatherScanThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-400">
-          <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2080#2081#0" expanded="true" />
-            <element signature="e#2108#2109#0" expanded="true" />
-            <element signature="e#2150#2151#0" expanded="true" />
-            <element signature="e#2184#2185#0" expanded="true" />
-            <element signature="e#2215#2216#0" expanded="true" />
-            <element signature="e#2242#2243#0" expanded="true" />
-            <element signature="e#2282#2283#0" expanded="true" />
-            <element signature="e#2314#2315#0" expanded="true" />
-            <element signature="e#2344#2345#0" expanded="true" />
-            <element signature="e#2370#2371#0" expanded="true" />
-            <element signature="e#2408#2409#0" expanded="true" />
-            <element signature="e#2438#2439#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="308">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/io/filetransfer/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="484">
+          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/udpserver/currency/CurrencyScanThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-301">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/udpserver/currency/CurrencyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="20" column="73" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/udpserver/news/NewsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/udpserver/news/NewsScanThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/udpserver/weather/WeatherScanThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1210">
+          <caret line="55" column="33" lean-forward="true" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/udpserver/weather/WeatherService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/udpserver/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1914">
+          <caret line="99" column="64" selection-start-line="99" selection-start-column="64" selection-end-line="99" selection-end-column="64" />
         </state>
       </provider>
     </entry>

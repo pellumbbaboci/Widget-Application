@@ -9,18 +9,18 @@ public class CurrencyService {
 
     private SocketClient socketClient;
 
-    public CurrencyService(SocketClient socketClient){
+    public CurrencyService(SocketClient socketClient) {
         this.socketClient = socketClient;
     }
 
-    public Map<String, String> getCurrency(){
+    public Map<String, String> getCurrency() {
         String currencyString = socketClient.sendEcho("currency");
         String[] currencyList = currencyString.split(",");
         Map<String, String> stringMap = new HashMap<>();
 
-        for(String i : currencyList){
-                String[] value = i.split(":");
-                stringMap.put(value[0], value[1]);
+        for (String i : currencyList) {
+            String[] value = i.split(":");
+            stringMap.put(value[0], value[1]);
         }
 
         return stringMap;

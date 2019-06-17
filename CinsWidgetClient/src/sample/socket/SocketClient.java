@@ -6,17 +6,15 @@ import java.net.*;
 public class SocketClient {
     private DatagramSocket socket;
     private InetAddress address;
- 
-    private byte[] buf;
- 
+
     public SocketClient() throws SocketException, UnknownHostException {
         socket = new DatagramSocket();
         address = InetAddress.getByName("localhost");
     }
- 
+
     public String sendEcho(String msg) {
-        buf = msg.getBytes();
-        DatagramPacket packet = new DatagramPacket(buf, buf.length, address, 9999);
+        byte[] buffer = msg.getBytes();
+        DatagramPacket packet = new DatagramPacket(buffer, buffer.length, address, 9999);
         try {
             socket.send(packet);
         } catch (IOException e) {
@@ -39,8 +37,5 @@ public class SocketClient {
 
         return received;
     }
- 
-    public void close() {
-        socket.close();
-    }
+
 }

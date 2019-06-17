@@ -6,13 +6,13 @@ public class NewsService {
 
     private NewsScanThread newsScanThread;
 
-    public NewsService(NewsScanThread newsScanThread){
+    public NewsService(NewsScanThread newsScanThread) {
         this.newsScanThread = newsScanThread;
     }
 
-    public String getNewsString(){
+    public String getNewsString() {
         List<String> newsList = this.newsScanThread.getCachedNewsList();
-        if(newsList == null ||newsList.isEmpty()){
+        if (newsList == null || newsList.isEmpty()) {
             return "Error receiving the data from the service " + this.newsScanThread.getUrl();
         }
         StringBuilder stringBuilder = new StringBuilder();

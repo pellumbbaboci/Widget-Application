@@ -6,10 +6,10 @@ import java.util.List;
 
 public class FileScanThread implements Runnable {
 
-    File folder;
     static List<String> folderList = new ArrayList<>();
+    private File folder;
 
-    public FileScanThread(File folder) {
+    FileScanThread(File folder) {
         this.folder = folder;
         search(".*\\.mp3", folder, folderList);
 
@@ -20,7 +20,7 @@ public class FileScanThread implements Runnable {
 
     @Override
     public void run() {
-        while(true){
+        while (true) {
             try {
                 Thread.sleep(900000);
                 List<String> nList = new ArrayList<>();
@@ -31,13 +31,13 @@ public class FileScanThread implements Runnable {
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
+                break;
             }
         }
 
     }
 
-
-    public static void search(final String pattern, final File folder, List<String> result) {
+    private void search(final String pattern, final File folder, List<String> result) {
         for (final File f : folder.listFiles()) {
 
             if (f.isDirectory()) {
